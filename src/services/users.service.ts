@@ -13,4 +13,8 @@ export class usersService {
   public getLoginUser(userData :any){
     return this.httpClient.get<any>(this.SERVER_URL +'users/'+ userData.Email + '/' + userData.Password);
   }
+
+  public insertUser(userData: any) {
+    return this.httpClient.post<any>(this.SERVER_URL + 'users/', userData);
+  }
 }

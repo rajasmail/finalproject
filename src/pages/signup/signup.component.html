@@ -12,25 +12,25 @@
                   <div class="col-12">
                       <label class="label-signup-username">UserName</label>
                       <mat-form-field class="mat-username">
-                          <input formControlName="Username" class="tag-username" matInput #email>
-                          <mat-error *ngIf="signupform.get('Username')?.invalid" class="username-error">Please provide a valid email address</mat-error>
+                          <input formControlName="username" class="tag-username" matInput #email>
+                          <mat-error *ngIf="signupform.get('username')?.invalid" class="username-error">Please provide a valid email address</mat-error>
                       </mat-form-field>
                       <label class="label-signup-email">Email</label>
                       <mat-form-field class="mat-email">
-                          <input formControlName="Email" class="tag-email" matInput #email>
-                          <mat-error *ngIf="signupform.get('Email')?.invalid" class="email-error">Please provide a valid email address</mat-error>
+                          <input formControlName="email" class="tag-email" matInput #email>
+                          <mat-error *ngIf="signupform.get('email')?.invalid" class="email-error">Please provide a valid email address</mat-error>
                       </mat-form-field>
                       <label class="label-signup-pass">Password</label>
                       <mat-form-field class="mat-pass">
                           <div class="password">
-                              <input formControlName="Password" class="tag-pass" matInput #password>
+                              <input formControlName="password" class="tag-pass" matInput #password>
                           </div>
-                                  <mat-error *ngIf="signupform.get('Password')?.invalid" class="password-error" >Please provide a password</mat-error>
+                                  <mat-error *ngIf="signupform.get('password')?.invalid" class="password-error" >Please provide a password</mat-error>
                       </mat-form-field>
-                      <label class="label-signup-type">Type</label>
-                      <mat-radio-group class="type" formControlName="Type">
-                        <mat-radio-button value="driver" >Driver</mat-radio-button>
-                        <mat-radio-button value="user" >User</mat-radio-button>
+                      <label class="label-signup-type">Role</label>
+                      <mat-radio-group class="type" formControlName="levelOfAccess">
+                        <mat-radio-button [value]="2" >Driver</mat-radio-button>
+                        <mat-radio-button [value]="3" >User</mat-radio-button>
                     </mat-radio-group>
                       <div>
                           <button  class="btn-signup">Register</button>
